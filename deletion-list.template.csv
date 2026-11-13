@@ -1,0 +1,3 @@
+BrandId,BrandName,LibraryId,LibraryName,LibraryType,AssetId,AssetName,AssetExtension
+1,Example Brand,100,Example Library,MEDIALIBRARY,123456,example-asset-one,jpg
+1,Example Brand,100,Example Library,MEDIALIBRARY,123457,example-asset-two,png

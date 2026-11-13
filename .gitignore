@@ -9,3 +9,6 @@ node_modules/
 *.failed
 *.numbers
 failed-assets-*.json
+
+# Keep the blank template
+!deletion-list.template.csv

@@ -28,9 +28,11 @@ A small Node.js script that bulk-deletes Frontify assets listed in a CSV file, u
 
 The CSV must have a header row including an `AssetId` column (the legacy numeric asset ID). `AssetName` and `LibraryName` are optional and used only for logging. Quoted fields containing commas are supported.
 
+Start from [`deletion-list.template.csv`](deletion-list.template.csv):
+
 ```
-BrandId,BrandName,LibraryId,LibraryName,LibraryType,AssetId,AssetName,...
-95,Bosch Professional,2656,AC_EXPERT_EA_SE,MEDIALIBRARY,549565,SPADE BIT_SELFCUTSPEED,...
+BrandId,BrandName,LibraryId,LibraryName,LibraryType,AssetId,AssetName,AssetExtension
+1,Example Brand,100,Example Library,MEDIALIBRARY,123456,example-asset-one,jpg
 ```
 
 Duplicate `AssetId`s are removed automatically. Numeric IDs are converted to Frontify global IDs (`base64({"identifier":<id>,"type":"asset"})`) before the API call.
@@ -60,6 +62,7 @@ node delete-assets.mjs "your-list.csv"
 | File | Purpose |
 | --- | --- |
 | `delete-assets.mjs` | The deletion script |
+| `deletion-list.template.csv` | Blank CSV template (copy it and fill in your asset IDs) |
 | `.env.example` | Template for required environment variables |
 
 CSV inputs, checkpoint/failed logs, and `.env` contain client data or credentials and are excluded from version control via `.gitignore`.
