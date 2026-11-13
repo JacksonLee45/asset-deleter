@@ -1,0 +1,11 @@
+.env
+notes.txt
+.DS_Store
+node_modules/
+
+# Client data and run artifacts
+*.csv
+*.checkpoint
+*.failed
+*.numbers
+failed-assets-*.json
